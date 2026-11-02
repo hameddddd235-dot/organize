@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --syria-gold: #C5A059;
+    --syria-gold-light: #E8D19B;
+    --syria-gold-dark: #8F6E26;
+    --syria-navy: #0B1320;
+    --syria-dark: #070C15;
+    --syria-card: #111A2C;
+    --syria-border: #22334C;
+  }
+
+  * {
+    border-color: #22334C;
+    /* Prevent negative letter spacing on Arabic characters */
+    letter-spacing: 0 !important;
+  }
+
+  body {
+    background-color: #070C15;
+    color: #F8FAFC;
+    font-family: 'Tajawal', 'Cairo', system-ui, -apple-system, sans-serif;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.45;
+    font-weight: 700;
+  }
+
+  p, span, label, input, select, textarea {
+    line-height: 1.6;
+  }
+}
+
+/* Custom Scrollbar - Syrian Gold Accents */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1320;
+}
+::-webkit-scrollbar-thumb {
+  background: #253852;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A059;
+}
+
+/* Glassmorphism helpers - Syrian Identity */
+.glass-panel {
+  background: rgba(17, 26, 44, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(34, 51, 76, 0.7);
+}
+
+.glass-card {
+  background: linear-gradient(145deg, rgba(17, 26, 44, 0.85) 0%, rgba(9, 15, 26, 0.95) 100%);
+  border: 1px solid rgba(34, 51, 76, 0.8);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+}
+
+.syria-gold-gradient {
+  background: linear-gradient(135deg, #E8D19B 0%, #C5A059 50%, #8F6E26 100%);
+}
+
+.syria-gold-text {
+  background: linear-gradient(135deg, #F5E2B8 0%, #C5A059 50%, #A58238 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.syria-badge-gold {
+  background-color: rgba(197, 160, 89, 0.12);
+  color: #E8D19B;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+}
+
+/* BiDi isolation helper for Arabic text with numbers, dates or Latin codes */
+.bidi-isolate {
+  unicode-bidi: isolate;
+  direction: rtl;
+}
+
+.bidi-ltr {
+  unicode-bidi: isolate;
+  direction: ltr;
+  display: inline-block;
+}
+
+/* Print Styles for Syrian Government Protocols */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}
